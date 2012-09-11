@@ -1,4 +1,4 @@
-package com.steventk.springinaction;
+package com.steventk.springinaction.springidol;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

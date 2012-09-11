@@ -1,4 +1,4 @@
-package com.steventk.springinaction;
+package com.steventk.springinaction.springidol;
 
 public class Guitar implements Instrument{
 
