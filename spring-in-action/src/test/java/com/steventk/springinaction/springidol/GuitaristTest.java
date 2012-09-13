@@ -10,7 +10,7 @@ public class GuitaristTest {
 	
 	@Test
 	public void testPerform(){
-		ApplicationContext ctx = new ClassPathXmlApplicationContext("spring-in-action-ch03.xml");
+		ApplicationContext ctx = new ClassPathXmlApplicationContext(Constants.SPRING_IN_ACTION_APP_CTX);
 		Performer guitarist = (Performer) ctx.getBean("guitarist");
 		guitarist.perform();
 	}
