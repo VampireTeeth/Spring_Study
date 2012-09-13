@@ -27,6 +27,8 @@
 	
 	<bean id="volunteer" class="com.steventk.springinaction.springidol.Volunteer"/>
 	
+	<bean id="contestantDelegate" class="com.steventk.springinaction.springidol.GraciousContestant"/>
+	
 	<aop:config>
 		<aop:pointcut
 			expression="execution(* com.steventk.springinaction.springidol.Performer.perform(..))"
@@ -53,6 +55,14 @@
 		
 		<aop:aspect ref="magician">
 			<aop:before method="interceptThoughts" arg-names="thoughts" pointcut-ref="thinking"/>
+		</aop:aspect>
+		
+		
+		<aop:aspect>
+			<aop:declare-parents types-matching="com.steventk.springinaction.springidol.Performer+" 
+				implement-interface="com.steventk.springinaction.springidol.Contestant"
+				delegate-ref="contestantDelegate"
+				/>
 		</aop:aspect>
 		
 	</aop:config>
